@@ -6,7 +6,7 @@
 
 **git clone https://github.com/Muhammadarfin/DDos/blob/main/README.md**
 
-cd DDoS
+**cd DDoS**
 
 **pip install request**
 
