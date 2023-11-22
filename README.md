@@ -4,12 +4,14 @@
 
 **pkg install python**
 
-**https://github.com/Muhammadarfin/DDos/tree/main**
+**git clone https://github.com/Muhammadarfin**
 
 **cd DDoS**
 
 **pip install request**
 
 chmod +x *
+
+**git pull**
 
 **python DDos.py**
