@@ -4,7 +4,7 @@
 
 **pkg install python**
 
-https://github.com/Muhammadarfin/DDos/blob/main/README.md
+**git clone https://github.com/Muhammadarfin/DDos/blob/main/README.md**
 
 cd DDoS
 
