@@ -4,9 +4,9 @@
 
 **pkg install python**
 
-**git clone https://github.com/Muhammadarfin**
+**git clone https://github.com/Muhammadarfin/DDos**
 
-**cd DDoS**
+**cd DDos**
 
 **pip install request**
 
