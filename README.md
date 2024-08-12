@@ -9,6 +9,7 @@
 **cd DDos**
 
 **pip install request**
+**pip install requests colorama**
 
 chmod +x *
 
